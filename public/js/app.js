@@ -49,6 +49,8 @@ var that = this;
                     $(".redP").html("Password or Username is not valid")
                   
               }else{
+
+                window.location.href ="http://localhost:3000/#/home";
                 
               }
              },
