@@ -2,17 +2,17 @@
 var express = require("express");
 
 var session = require('express-session');
-var expressSessionStore = require('express-session-store');
+var RedisStore = require('connect-redis')(session);
+
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var logger = require( "morgan" );
-
 var sessionOptions = {
   secret: '1234567890QWERTY',
   resave: true,
   saveUninitialized: true,
   proxy: true,
-  store: expressSessionStore
+  store: new RedisStore()
 };
 
 
