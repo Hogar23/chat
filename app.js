@@ -15,6 +15,7 @@ var sessionOptions = {
   store: new RedisStore()
 };
 
+//test
 
 
 // configure express
